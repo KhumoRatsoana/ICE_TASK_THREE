@@ -4,7 +4,17 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Circle c = new Circle(23);
+            c.Display();
+            c.CalculateArea();
+
+            Console.WriteLine();
+
+            Rectangle rec = new Rectangle(23,45);
+            rec.Display();
+            rec.CalculateArea();
+
+            Console.ReadKey();
         }
     }
 }
