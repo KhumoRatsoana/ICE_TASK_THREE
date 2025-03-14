@@ -13,27 +13,27 @@ jobs:
     steps: 
         #Checkout Repository
         - name: Checkout Code 
-        - run: actions/checkout@v4
+          uses: actions/checkout@v4
        # 
 
        #Set up .NET SDK
         - name: Set up .NET SDK
-        - uses: actions/setup-dotnet@v4
+          uses: actions/setup-dotnet@v4
           with: 
-            dontnet version: '9.0'
+            dontnet-version: '9.0'
 
 
       # Restore any dependancies 
         - name: Dependancies
-        - run: dotnet restore
+          run: dotnet restore
 
       # Run Unit Test
         - name: Unit Test
-        - run: dotnet test
+          run: dotnet test
 
       #Build the project
         - name: Project Build 
-        - run: dotnet build --configuration release 
+          run: dotnet build --configuration release 
       
           
   
